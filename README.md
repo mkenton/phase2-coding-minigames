@@ -1,4 +1,6 @@
-Coding Minigames
+# Coding Minigames #
+
+## Authors: Cameryn Duarte, Michael Kenton ##
 
 As a user, I want to be able to enter my user name, then choose a game to play and have my scores saved to the database under my name. Finally, I should be able to see my highscores saved on the stats page. This application will allow a user to play games and save their scores to a RESTful API (using a json-server). The highscores will be posted to a stats page, displaying the highest and lowest ranking players. 
 
