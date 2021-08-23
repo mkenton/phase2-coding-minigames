@@ -7,5 +7,7 @@ As a user, I want to be able to enter my user name, then choose a game to play a
 A NavBar component contains Home and Stats components. Home is the containing an input field for the player name and routes to each game, where you play under said name. Playing the game will post score data to the API associated with the entered user name. Stats will not contain any routes, but display data of high scores of users stored in the API.
 
 
-![Wireframe - Proj 2](https://user-images.githubusercontent.com/86212620/130525889-11866ef6-56cb-4c30-aa4f-057d663f3d50.png)
+![Wireframe - Proj 2](https://user-images.githubusercontent.com/86212620/130526212-86e288bc-897d-4480-b43f-13e41fac0a30.png)
+
+
 
