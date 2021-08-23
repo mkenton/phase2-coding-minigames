@@ -1,13 +1,44 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.home {
+    padding-top: 100px;
+    text-align: center;
+    color: pink;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.games {
+    padding-top: 100px;
+    text-align: center;
+    color: yellow;
+}
+
+.game1 {
+    padding-top: 100px;
+    text-align: center;
+    color: green;
+}
+
+.game2 {
+    padding-top: 100px;
+    text-align: center;
+    color: orange;
+}
+
+.stats {
+    padding-top: 100px;
+    text-align: center;
+    color: blue;
+}
+
+.links {
+    padding: 20px;
+}
+
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 10000;
+    background-color: rgb(167, 247, 207);
+    text-align: center;
 }
