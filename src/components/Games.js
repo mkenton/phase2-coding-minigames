@@ -2,7 +2,7 @@ import {Route, Switch, NavLink, useRouteMatch} from "react-router-dom"
 import Game1 from "./GameOne"
 import Game2 from "./GameTwo"
 
-export default function Games() {
+export default function Games({increaseScore}) {
     let match = useRouteMatch();
 
     return (
@@ -16,10 +16,10 @@ export default function Games() {
             </nav>
             <Switch>
                 <Route path={`${match.path}/game1`}>
-                    <Game1/>
+                    <Game1 increaseScore={increaseScore} />
                 </Route>
                 <Route path={`${match.path}/game2`}>
-                    <Game2/>
+                    <Game2 increaseScore={increaseScore} />
                 </Route>
             </Switch>
         </div>

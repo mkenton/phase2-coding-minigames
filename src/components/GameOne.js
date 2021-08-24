@@ -1,5 +1,10 @@
 
-export default function Game1() {
+
+export default function Game1({increaseScore}) {
+
+    function handleClick() {
+        increaseScore('game1')
+    }
 
     // const handleKeyDown = (event)=>{
     //     event.preventDefault();
@@ -12,6 +17,7 @@ export default function Game1() {
     return (
         <div className="game-area" >
             <h1 className="game1">Game 1</h1>
+            <button onClick={handleClick}>increase score</button>
         </div>
     )
 }

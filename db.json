@@ -3,14 +3,17 @@
     {
       "id": 1,
       "name": "Michael",
-      "game 1 score": 0,
-      "game 2 score": 0
+      "game1": 8,
+      "game2": 7,
+      "currentPlayer": true
     },
     {
       "id": 2,
       "name": "Cameryn",
-      "game 1 score": 0,
-      "game 2 score": 0
+      "game1": 10,
+      "game2": 3,
+      "currentPlayer": true,
+      "game": 8
     }
   ]
 }

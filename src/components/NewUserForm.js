@@ -17,7 +17,6 @@ export default function NewUserForm({newUserSubmit}) {
                 <input 
                     type="text" 
                     placeholder="Enter your name..."
-                    type="text"
                     id="nameInput"
                     value={newUser}
                     onChange={(e) => setNewUser(e.target.value)}
