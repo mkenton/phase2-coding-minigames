@@ -1,10 +1,9 @@
-
-.component-header{
+.component-header {
     padding-top: 50px;
     text-align: center;
     color: pink;
     background-color: whitesmoke;
-  }
+}
 
 table, th, td {
     border: 1px solid black;
@@ -12,18 +11,16 @@ table, th, td {
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
-  }
+}
 
-  th, td {
+th, td {
     padding: 10px;
-  }
-  
+}
 
 .home {
     padding-top: 100px;
     text-align: center;
     color: rgb(236, 128, 146);
-
 }
 
 .games {
@@ -63,7 +60,6 @@ table, th, td {
     background-color: whitesmoke;
     border: 5px black;
     z-index: 1000;
-    
 }
 
 .active-game {
@@ -81,24 +77,22 @@ table, th, td {
     text-align: center;
 }
 
-
 .game-navbar {
-    text-align:center;
+    text-align: center;
     padding: 0px 10px;
 }
 
-/* .page-not-found {
+.page-not-found {
     position: relative;
     margin-top: 80px;
     text-align: center;
-} */
+}
 
 .user-class {
     display: inline-block;
     padding: 20px;
-    border-width:2px;
-    border-style:solid;
-    border-color:black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
     margin: 20px;
 }
-

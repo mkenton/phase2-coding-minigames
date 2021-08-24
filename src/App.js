@@ -48,9 +48,10 @@ function App() {
         <Route path="/stats">
           <Stats users={users} />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Home newUserSubmit={newUserSubmit} users={users}/>
         </Route>
+        <Route path ="*"><h1 className="page-not-found">404 Page Not Found :(</h1></Route>
       </Switch>
       </div>
     </Router>
