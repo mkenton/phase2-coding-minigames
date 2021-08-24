@@ -15,10 +15,10 @@ export default function Games() {
                 </ul>
             </nav>
             <Switch>
-                <Route path={`${match.path}/:game1`}>
+                <Route path={`${match.path}/game1`}>
                     <Game1/>
                 </Route>
-                <Route path={`${match.path}/:game2`}>
+                <Route path={`${match.path}/game2`}>
                     <Game2/>
                 </Route>
             </Switch>

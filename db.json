@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Michael",
+      "game 1 score": 0,
+      "game 2 score": 0
+    },
+    {
+      "id": 2,
+      "name": "Cameryn",
+      "game 1 score": 0,
+      "game 2 score": 0
+    }
+  ]
+}
