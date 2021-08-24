@@ -1,21 +1,25 @@
-import {Route, BrowserRouter as Router, Switch, Link} from "react-router-dom"
+
+import { Route, BrowserRouter as Router, Switch, NavLink } from "react-router-dom"
+
 import React, {useState, useEffect} from 'react';
+
 import Home from "./components/Home"
 import Games from "./components/Games"
 import Stats from "./components/Stats"
 
+const API = `http://localhost:8001/users`
 function App() {
 
   const [users, setUsers] = useState([]) 
 
   useEffect(() => {
-    fetch('http://localhost:3000/users')
+    fetch(API)
     .then(r => r.json())
     .then(data => setUsers(data))
   }, [])
 
   function newUserSubmit(name) {
-      fetch('http://localhost:3000/users', {
+      fetch(API, {
         method: "POST",
         headers: {"Content-Type" : "application/json"},
         body: JSON.stringify({
@@ -43,7 +47,7 @@ function App() {
     console.log(newScore)
     setUsers(users.map((user) => user.id === currentPlayer[0].id ? {...user, game : newScore} : user))
     console.log(users)
-    fetch(`http://localhost:3000/users/${currentPlayer[0].id}`, {
+    fetch(`${API}/${currentPlayer[0].id}`, {
       method: "PATCH",
       headers: {"Content-Type" : "application/json"},
       body: JSON.stringify({
@@ -59,10 +63,11 @@ function App() {
     <Router>
       <div className="App">
         <nav className="fixed-navbar">
-            <Link className="links" to="/">Home</Link>
-            <Link className="links" to="/games">Games</Link>
-            <Link className="links" to="/stats">Stats</Link>
+          <NavLink exact activeClassName="active-nav" className="links" to="/">Home</NavLink>
+          <NavLink activeClassName="active-nav" className="links" to="/games">Games</NavLink>
+          <NavLink activeClassName="active-nav" className="links" to="/stats">Stats</NavLink>
         </nav>
+
       <Switch>
         <Route path="/games">
           <Games increaseScore={increaseScore} />
@@ -70,9 +75,10 @@ function App() {
         <Route path="/stats">
           <Stats users={users} />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Home newUserSubmit={newUserSubmit} users={users} selectPlayer={selectPlayer} />
         </Route>
+        <Route path ="*"><h1 className="page-not-found">404 Page Not Found :(</h1></Route>
       </Switch>
       </div>
     </Router>
