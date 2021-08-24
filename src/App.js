@@ -7,18 +7,19 @@ import Home from "./components/Home"
 import Games from "./components/Games"
 import Stats from "./components/Stats"
 
+const API = `http://localhost:8001/users`
 function App() {
 
   const [users, setUsers] = useState([]) 
 
   useEffect(() => {
-    fetch('http://localhost:3000/users')
+    fetch(API)
     .then(r => r.json())
     .then(data => setUsers(data))
   }, [])
 
   function newUserSubmit(name) {
-      fetch('http://localhost:3000/users', {
+      fetch(API, {
         method: "POST",
         headers: {"Content-Type" : "application/json"},
         body: JSON.stringify({
@@ -46,7 +47,7 @@ function App() {
     console.log(newScore)
     setUsers(users.map((user) => user.id === currentPlayer[0].id ? {...user, game : newScore} : user))
     console.log(users)
-    fetch(`http://localhost:3000/users/${currentPlayer[0].id}`, {
+    fetch(`${API}/${currentPlayer[0].id}`, {
       method: "PATCH",
       headers: {"Content-Type" : "application/json"},
       body: JSON.stringify({
