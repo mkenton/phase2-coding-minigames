@@ -2,22 +2,23 @@ import {useState} from 'react'
 
 export default function GameOnePlay() {
 
-    const [numbers, setNumbers] = useState([])
-    const userArray = []
-
-    const ARRAY_LENGTH = 50
     const randomArray = []
+    const ARRAY_LENGTH = 25
     for(let i = 0; i<ARRAY_LENGTH; i++) {
-        randomArray.push(Math.floor(Math.random() * 20))
+        randomArray.push(Math.floor(Math.random() * 10))
     }
+    console.log(randomArray)
+
+    const userArray = []
+    let i = 0
 
     function checkNumbers(e) {
         e.preventDefault()
-        setNumbers(e.target.value)
-        userArray.push(numbers)
-        for(let i = 0; i < randomArray.length; i++) {
-            randomArray[i] === userArray[i] ? console.log('yes!') : console.log('no!')
-        }
+        console.log(e.target.value)
+        userArray.push(parseInt(e.target.value))
+        console.log(userArray)
+        randomArray[i] === userArray[i] ? console.log('yes!') : console.log('no!')
+        i++
     }
 
     return (
@@ -25,11 +26,11 @@ export default function GameOnePlay() {
             <h1>{randomArray}</h1>
             <input 
                 type="text" 
-                placeholder="type!"
+                placeholder="type here!"
                 id="gameInput"
-                value={numbers}
+                value={''}
                 onChange={(e) => checkNumbers(e)}
-            />
+                />
         </div>
     )
 }
