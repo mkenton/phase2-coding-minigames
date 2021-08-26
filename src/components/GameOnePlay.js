@@ -3,7 +3,7 @@ import Correct from './Correct'
 import Incorrect from './Incorrect'
 
 
-export default function GameOnePlay({increaseScore, gameStartStop, setGame, users}) {
+export default function GameOnePlay({ gameStartStop, setGame }) {
     
     const [correctIncorrect, setCorrectIncorrect] = useState('start')
     const [randomArray, setRandomArray] = useState([])
@@ -11,10 +11,8 @@ export default function GameOnePlay({increaseScore, gameStartStop, setGame, user
     const [score, setScore] = useState(0)
     const [seconds, setSeconds] = useState(10)
 
-    
-
     useEffect(() => {
-        const ARRAY_LENGTH = 25
+        const ARRAY_LENGTH = 20
         for(let i = 0; i<ARRAY_LENGTH; i++) {
             randomArray.push(Math.floor(Math.random() * 10))
         }
