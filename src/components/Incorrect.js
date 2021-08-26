@@ -1,6 +1,6 @@
 export default function Incorrect({userArray}) {
     return (
-        <h1 className="incorrect">INCORRECT</h1>
+        <h1 className="incorrect">WRONG</h1>
 
     )
 }

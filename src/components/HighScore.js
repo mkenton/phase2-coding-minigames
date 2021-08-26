@@ -1,5 +1,8 @@
 export default function HighScore() {
     return (
-        <h2>New high score!!</h2>
+        <>
+        <h1 className="game-over">GAME OVER</h1>
+        <h2 className="score-message">New high score!!</h2>
+        </>
     )
 }

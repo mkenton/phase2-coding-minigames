@@ -26,7 +26,7 @@ function App() {
           "id" : `${users.length + 1}`,
           "name" : name,
           "game1" : 0,
-          "game2" : 0
+          "game2" : 0,
         })
       })
       .then(r => r.json())
