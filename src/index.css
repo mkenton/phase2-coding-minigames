@@ -47,8 +47,9 @@ th, td {
     color: orange;
 }
 
-.game-area {
+.game2-area {
     display: grid;
+    background-color: blueviolet;
 }
 
 .links {
@@ -95,4 +96,10 @@ th, td {
     border-style: solid;
     border-color: black;
     margin: 20px;
+}
+
+.snippet {
+    max-width: 100px;
+    margin: 5px;
+    border: 2px black solid
 }
