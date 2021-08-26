@@ -5,33 +5,21 @@
       "name": "Michael",
       "game1": 11,
       "game2": 7,
-      "currentPlayer": true
+      "currentPlayer": false
     },
     {
       "id": 2,
       "name": "Cameryn",
-      "game1": 10,
+      "game1": 7,
       "game2": 3,
-      "currentPlayer": true,
-      "game": 8
+      "currentPlayer": false
     },
     {
       "id": "3",
       "name": "Player 3",
-      "game1": 0,
-      "game2": 0
-    },
-    {
-      "id": "4",
-      "name": "Player 4",
-      "game1": 0,
-      "game2": 0
-    },
-    {
-      "id": "5",
-      "name": "Player 4",
-      "game1": 0,
-      "game2": 0
+      "game1": 7,
+      "game2": 0,
+      "currentPlayer": false
     }
   ]
 }

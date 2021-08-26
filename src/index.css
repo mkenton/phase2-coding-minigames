@@ -1,5 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body, input, button {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.game-over {
+    color: red;
+}
+
+.score-message {
+    color: turquoise;
+}
+
+.game1-play {
+    color: pink;
+}
+
 .component-header {
     padding-top: 50px;
+    padding-bottom: 40px;
     text-align: center;
     color: pink;
     background-color: whitesmoke;
@@ -7,6 +26,7 @@
 
 .incorrect {
     color: red;
+    font-size: 100px;
 }
 .correct {
     color: green;
@@ -29,9 +49,9 @@ th, td {
 }
 
 .home {
-    padding-top: 100px;
+    padding-top: 30px;
     text-align: center;
-    color: rgb(236, 128, 146);
+    color: rgb(248, 96, 167);
 }
 
 .games {
@@ -48,8 +68,17 @@ th, td {
 
 .game1 {
     padding-top: 10px;
+    background-color: rgb(14, 165, 0);
+    color: rgb(0, 0, 0);
     text-align: center;
-    color: rgb(70, 70, 70);
+    margin: auto;
+    display: inline-block;
+    padding: 20px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: rgb(136, 136, 136);
+    box-shadow: 5px 5px rgb(168, 167, 167);
+    margin: 20px;
 }
 
 .game2 {
@@ -74,7 +103,7 @@ th, td {
 }
 
 .active-game {
-    color: turquoise
+    color: turquoise;
 }
 
 .fixed-navbar {
@@ -105,5 +134,17 @@ th, td {
     border-width: 2px;
     border-style: solid;
     border-color: black;
+    box-shadow: 5px 5px rgb(168, 167, 167);
     margin: 20px;
+}
+
+.active-user-class {
+    display: inline-block;
+    padding: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 5px 5px rgb(168, 167, 167);
+    margin: 20px;
+    background-color: rgb(167, 247, 207);
 }

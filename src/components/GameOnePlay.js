@@ -59,9 +59,9 @@ export default function GameOnePlay({increaseScore, gameStartStop, setGame, user
     }
 
     return (
-        <div>
+        <div className="game1-play">
             <h1>You have {seconds} seconds</h1>
-            <h1>{randomArray}</h1>
+            <h1 className="number">{randomArray}</h1>
             {correctIncorrect === 'start' ? '' : correctIncorrect ? <Correct/> : <Incorrect/>}
             <input 
                 type="text" 
@@ -69,7 +69,7 @@ export default function GameOnePlay({increaseScore, gameStartStop, setGame, user
                 id="gameInput"
                 value={''}
                 onChange={(e) => checkNumbers(e)}
-                />
+            />
         </div>
     )
 }
