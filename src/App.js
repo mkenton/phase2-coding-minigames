@@ -38,21 +38,23 @@ function App() {
     console.log(users)
   }
 
-  function increaseScore(game) {
+  function increaseScore(game, score) {
 
     console.log(game)
+    console.log(score)
     const currentPlayer = users.filter((user) => user.currentPlayer)
+    // const newScore = currentPlayer[0][game] < score ? score : currentPlayer[0][game]
     console.log(currentPlayer)
-    const newScore = currentPlayer[0][game] + 1
-    console.log(newScore)
-    setUsers(users.map((user) => user.id === currentPlayer[0].id ? {...user, game : newScore} : user))
+    // const newScore = currentPlayer[0][game] + 1
+    // console.log(newScore)
+    setUsers(users.map((user) => user.id === currentPlayer[0].id ? {...user, game : score} : user))
     console.log(users)
     fetch(`${API}/${currentPlayer[0].id}`, {
       method: "PATCH",
       headers: {"Content-Type" : "application/json"},
       body: JSON.stringify({
         "currentPlayer" : true,
-        [game] : newScore
+        [game] : score
       })
     })
     .then(r => r.json())
@@ -70,7 +72,7 @@ function App() {
 
       <Switch>
         <Route path="/games">
-          <Games increaseScore={increaseScore} />
+          <Games increaseScore={increaseScore} users={users}/>
         </Route>
         <Route path="/stats">
           <Stats users={users} />

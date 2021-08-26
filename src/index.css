@@ -5,12 +5,23 @@
     background-color: whitesmoke;
 }
 
+.incorrect {
+    color: red;
+}
+.correct {
+    color: green;
+}
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
+}
+
+input {
+    text-align: center;
 }
 
 th, td {
@@ -38,7 +49,7 @@ th, td {
 .game1 {
     padding-top: 10px;
     text-align: center;
-    color: green;
+    color: rgb(70, 70, 70);
 }
 
 .game2 {
