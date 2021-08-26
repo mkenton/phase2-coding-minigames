@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     fetch(API)
     .then(r => r.json())
-    .then(data => setUsers(data))
+    .then(data => setUsers(data.map((user) => user.currentPlayer === true ? {...user, 'currentPlayer' : false} : user)))
   }, [])
 
   function newUserSubmit(name) {
@@ -27,6 +27,7 @@ function App() {
           "name" : name,
           "game1" : 0,
           "game2" : 0,
+          "currentPlayer" : false
         })
       })
       .then(r => r.json())

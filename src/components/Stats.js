@@ -4,8 +4,8 @@ export default function Stats({users}) {
     return (
         <div>
           <h1 className="component-header">Stats</h1>
-          <div className="stats-class">
-              <table>
+          <div className="stats-div">
+              <table className="stats">
                   <tr>
                       <th>User</th>
                       <th>Game 1</th>
