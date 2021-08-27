@@ -3,9 +3,9 @@
     {
       "id": 1,
       "name": "Michael",
-      "game1": 1,
+      "game1": 2,
       "game2": 1,
-      "currentPlayer": false
+      "currentPlayer": true
     },
     {
       "id": 2,
@@ -16,8 +16,15 @@
     },
     {
       "id": "3",
-      "name": "Player 3",
-      "game1": 5,
+      "name": "Connie",
+      "game1": 0,
+      "game2": 0,
+      "currentPlayer": false
+    },
+    {
+      "id": "4",
+      "name": "bhjmn",
+      "game1": 0,
       "game2": 0,
       "currentPlayer": false
     }
