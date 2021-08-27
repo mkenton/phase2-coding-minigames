@@ -32,7 +32,7 @@ export default function Game1({increaseScore, users}) {
 
     return (
         <div>
-            <h1>Game 1</h1>
+            <h1>~Number Cruncher~</h1>
             <p className="game-description">Enter as many numbers correctly as you can within 10 seconds. If you enter a number incorrectly, 
                 move on to the next, don't re-type! The object is to match as many of the displayed numbers as 
                 possible.</p>

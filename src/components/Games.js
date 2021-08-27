@@ -14,14 +14,15 @@ export default function Games({increaseScore, users}) {
     return (
         <div>
             <h1 className="component-header">Games</h1>
-            <nav className= "game-navbar">
-   
-                    <NavLink className="links" activeClassName="active-game" to={`${match.url}/game1`}>Game 1</NavLink>
-                    <NavLink className="links" activeClassName="active-game" to={`${match.url}/game2`}>Game 2</NavLink>
-               
-            </nav>
+
 
           <div className="game">
+          <nav className= "game-navbar">
+   
+   <NavLink className="game-link" activeClassName="active-game" to={`${match.url}/game1`}>Game 1</NavLink>
+   <NavLink className="game-link" activeClassName="active-game" to={`${match.url}/game2`}>Game 2</NavLink>
+
+</nav>
           <p className="warning">{isUser.length === 0 ? 'WARNING: Must select a user before selecting a game!' : ''}</p>
 
               {isUser.length === 0 ? '' : 
@@ -31,7 +32,7 @@ export default function Games({increaseScore, users}) {
                   <Game1 increaseScore={increaseScore} users={users}/>
               </Route>
               <Route path={`${match.path}/game2`}>
-                  <Game2 increaseScore={increaseScore} />
+                  <Game2 increaseScore={increaseScore} users={users}/>
               </Route>
               </Switch>}
 

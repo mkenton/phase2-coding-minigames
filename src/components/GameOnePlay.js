@@ -19,7 +19,7 @@ export default function GameOnePlay({ gameStartStop, setGame }) {
         setRandomArray([...randomArray])
     }, [])
 
-    console.log(randomArray)
+    // console.log(randomArray)
 
     useEffect(() => {
         let interval = null;
