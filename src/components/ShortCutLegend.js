@@ -16,14 +16,14 @@ const ShortCutLegend = () => {
 
 
 
-  // useKeyPress({key: 'a'}, (e) => console.log(e.key))
-  useKeyPress(['shift.c'], () => {
-    console.log("shift + c");
-  });
+  // // useKeyPress({key: 'a'}, (e) => console.log(e.key))
+  // useKeyPress(['shift.c'], () => {
+  //   console.log("shift + c");
+  // });
 
   return (
     <div className="legend">
-      <h4 style={{textAlign: 'left', color:'red', 'margin-bottom': '5px', marginLeft: '5px'}}> VSCode Shortcuts</h4>
+      <h4 style={{textAlign: 'left', color:'red', 'marginBottom': '5px', marginLeft: '5px'}}> VSCode Shortcuts</h4>
 
       <div className="legendKey"
         style={{ 'backgroundColor': isLineUp ? 'darkgrey' : '' }}>
