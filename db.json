@@ -27,6 +27,13 @@
       "game1": 0,
       "game2": 0,
       "currentPlayer": false
+    },
+    {
+      "id": "5",
+      "name": "Jay",
+      "game1": 11,
+      "game2": 0,
+      "currentPlayer": true
     }
   ]
 }
