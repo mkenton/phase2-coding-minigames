@@ -1,26 +1,22 @@
 // import useKeyPress from '../useKeyPress'
+import {useState} from 'react'
 import ShortCutLegend from "./ShortCutLegend"
 
-export default function Game2({ increaseScore }) {
+export default function Game2() {
 
+    const [gameStartStop, setGameStartStop] = useState(false)
+    // const [showLegend, setShowLegend] = useState(false)
 
     function handleClick() {
-        increaseScore('game2')
-    }
-
-
+        setGameStartStop(!gameStartStop)
+        console.log(typeof player)
+}
     return (
-        <div
-            // onKeyDown={(e) => onKeyPressed(e)}
-            // className="game2-area" 
-            // tabIndex="0"
-            >
-            <button onClick={
-                handleClick
-            }
-            >increase score</button>
+        <div>
             <h1 className="game2">Game 2</h1>
-            <ShortCutLegend/>
+            <button onClick={handleClick}>{gameStartStop ? "Quit" : "Start!"}</button>
+            <p className="game-description">Play to exercise your keyboard shortcut mastery! Use VSCode Shortcuts to move code blocks to match the goal pattern</p>
+            {gameStartStop ? <ShortCutLegend /> : ''}
         </div>
     )
 }
