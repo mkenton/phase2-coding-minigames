@@ -1,5 +1,5 @@
 // import useKeyPress from '../useKeyPress'
-import CodeSnippet from "./CodeSnippet"
+import ShortCutLegend from "./ShortCutLegend"
 
 export default function Game2({ increaseScore }) {
 
@@ -8,18 +8,6 @@ export default function Game2({ increaseScore }) {
         increaseScore('game2')
     }
 
-    // function onKeyPressed(e) {
-    //     console.log(e.key);
-    // }
-
-    // "keypress"==c&&!n.metaKey&&!n.ctrlKey
-    // const handleKeyDown = (event)=>{
-    //     event.preventDefault();
-    //   console.log('Key: ' + event.key)
-    //   console.log('KeyCode: ' + event.keyCode)
-    //   console.log('CharCode: ' + event.charCode);
-    //   console.log('Code: ' + event.code);
-    // }
 
     return (
         <div
@@ -32,7 +20,7 @@ export default function Game2({ increaseScore }) {
             }
             >increase score</button>
             <h1 className="game2">Game 2</h1>
-            <CodeSnippet/>
+            <ShortCutLegend/>
         </div>
     )
 }
