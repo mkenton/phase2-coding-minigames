@@ -10,16 +10,16 @@
     {
       "id": 2,
       "name": "Cameryn",
-      "game1": 0,
-      "game2": 0,
-      "currentPlayer": true,
-      "game": 8
+      "game1": 11,
+      "game2": 3,
+      "currentPlayer": false
     },
     {
       "id": "3",
-      "name": "Sam",
-      "game1": 0,
-      "game2": 0
+      "name": "Player 3",
+      "game1": 9,
+      "game2": 0,
+      "currentPlayer": false
     }
   ]
 }

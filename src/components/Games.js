@@ -3,8 +3,10 @@ import Game1 from "./GameOne"
 import Game2 from "./GameTwo"
 
 
-export default function Games({increaseScore}) {
+export default function Games({increaseScore, users}) {
     let match = useRouteMatch();
+    const isUser = users.filter((user) => user.currentPlayer === true ? user : '')
+    console.log(isUser)
 
     function onKeyPressed(e) {
         console.log(e.key);
@@ -18,14 +20,22 @@ export default function Games({increaseScore}) {
                     <NavLink className="links" activeClassName="active-game" to={`${match.url}/game2`}>Game 2</NavLink>
                
             </nav>
-            <Switch>
-                <Route path={`${match.path}/game1`}>
-                    <Game1 increaseScore={increaseScore} />
-                </Route>
-                <Route path={`${match.path}/game2`}>
-                    <Game2 onKeyDown={(e) => onKeyPressed(e)} increaseScore={increaseScore} />
-                </Route>
-            </Switch>
+
+          <div className="game">
+          <p className="warning">{isUser.length === 0 ? 'WARNING: Must select a user before selecting a game!' : ''}</p>
+
+              {isUser.length === 0 ? '' : 
+              <Switch>
+
+              <Route path={`${match.path}/game1`}>
+                  <Game1 increaseScore={increaseScore} users={users}/>
+              </Route>
+              <Route path={`${match.path}/game2`}>
+                  <Game2 increaseScore={increaseScore} />
+              </Route>
+              </Switch>}
+
+          </div>
         </div>
     )
 }
