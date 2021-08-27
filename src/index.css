@@ -202,7 +202,8 @@ th, td {
 
 
 .snippet0 {
-    background-color:rgb(27, 27, 27);
+    border: black 2px solid;
+    background-color:rgb(46, 46, 46);
     color: yellow;
     max-width: 250px;
     margin: 5px 0px;
@@ -247,10 +248,18 @@ th, td {
     font-family:'Courier New', Courier, monospace;
     text-align:left;
 }
-
-.goalContainer{
-    align-items: right;
+.grid-container{
+    display: grid;
+    grid-column-gap: 200px;
+    grid-template-columns: auto auto;
 }
+/* .goalContainer{
+    display: inline-grid;
+}
+
+.editor{
+    display: inline-grid;
+} */
 
 .start-button {
     margin-top: 15px;
