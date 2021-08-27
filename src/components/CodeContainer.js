@@ -1,9 +1,9 @@
 import CodeSnippet from "./CodeSnippet"
 
-export default function CodeContainer({goalCode}) {
+export default function CodeContainer({codes}) {
     return (
         <div className="goalcontainer">
-          {goalCode.map((code) => (
+          {codes.map((code) => (
         <CodeSnippet
           key={Math.random()}
           code={code}
