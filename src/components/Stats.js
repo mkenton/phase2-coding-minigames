@@ -3,7 +3,7 @@ import StatsDisplay from "./StatsDisplay"
 export default function Stats({users}) {
     return (
         <div>
-          <h1 className="component-header">Stats</h1>
+          <h1 className="component-header">High Scores</h1>
           <div className="stats-div">
               <table className="stats">
                   <tr>

@@ -22,34 +22,34 @@ const ShortCutLegend = () => {
   });
 
   return (
-    <span>
-      <h3 style={{textAlign: 'center'}}>VSCode Shortcuts</h3>
+    <div className="legend">
+      <h4 style={{textAlign: 'left', color:'red', 'margin-bottom': '5px', marginLeft: '5px'}}> VSCode Shortcuts</h4>
 
-      <div className="snippet"
-        style={{ 'backgroundColor': isLineUp ? 'Violet' : 'LightGray' }}>
-        <span>Move line up: <strong style={{ float: 'right' }}>  ⌥ + ↑</strong></span>
+      <div className="legendKey"
+        style={{ 'backgroundColor': isLineUp ? 'darkgrey' : '' }}>
+        <span>Move line up <strong style={{ float: 'right' }}>  ⌥ + ↑</strong></span>
       </div>
 
-      <div className="snippet"
-        style={{ 'backgroundColor': isLineDown ? 'Violet' : 'LightGray' }}>
-        <span>Move line down: <strong style={{ float: 'right' }}> ⌥ + ↓</strong></span>
+      <div className="legendKey"
+        style={{ 'backgroundColor': isLineDown ? 'grey' : '' }}>
+        <span>Move line down <strong style={{ float: 'right' }}> ⌥ + ↓</strong></span>
       </div>
 
-      <div className="snippet"
-        style={{ 'backgroundColor': isCopyLineUp ? 'yellow' : 'LightGray' }}>
-        <span>Copy line up: <strong style={{ float: 'right' }}> ⇧ + ⌥ + ↑</strong></span>
+      <div className="legendKey"
+        style={{ 'backgroundColor': isCopyLineUp ? 'grey' : '' }}>
+        <span>Copy line up <strong style={{ float: 'right' }}> ⇧ + ⌥ + ↑</strong></span>
 
       </div>
-      <div className="snippet"
-        style={{ 'backgroundColor': isCopyLineDown ? 'yellow' : 'LightGray' }}>
-        <span>Copy line down: <strong style={{ float: 'right' }}>  ⇧ + ⌥ + ↓</strong></span>
+      <div className="legendKey"
+        style={{ 'backgroundColor': isCopyLineDown ? 'grey' : '' }}>
+        <span>Copy line down <strong style={{ float: 'right' }}>  ⇧ + ⌥ + ↓</strong></span>
       </div>
 
-      <div className="snippet"
-        style={{ 'backgroundColor': isDeleteLine ? 'FireBrick' : 'LightGray' }}>
-        <span>Delete current line: <strong style={{ float: 'right' }}> ⇧ + ⌘ + K</strong></span>
+      <div className="legendKey"
+        style={{ 'backgroundColor': isDeleteLine ? 'grey' : '' }}>
+        <span>Delete line <strong style={{ float: 'right' }}> ⇧ + ⌘ + K</strong></span>
       </div>
-    </span>
+    </div>
   )
 }
 

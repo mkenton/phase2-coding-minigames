@@ -13,7 +13,7 @@ body, input, button {
     text-align: center;
     max-width: 400px;
     margin: auto;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .score-message {
@@ -67,8 +67,11 @@ th, td {
     border-style: solid;
     border-color: rgb(136, 136, 136);
     box-shadow: 5px 5px rgb(168, 167, 167);
-    max-width: 700px;
+    width: 60%;
+    height: 80%;
+    /* max-width: 700px; */
     min-height: 500px;
+    min-width: 700px;
     margin-top: 30px;
     margin-bottom: 50px;
 }
@@ -78,7 +81,7 @@ th, td {
     color: rgb(9, 255, 0);
     text-align: center;
     margin: auto;
-    padding: 20px;
+    padding: 15px;
     border-width: 20px;
     border-style: solid;
     border-color: rgb(136, 136, 136);
@@ -100,16 +103,14 @@ th, td {
     border-style: solid;
     border-color: rgb(136, 136, 136);
     box-shadow: 5px 5px rgb(168, 167, 167);
-    max-width: 700px;
+    width: 60%;
+    height: 80%;
+    /* max-width: 700px; */
     min-height: 300px;
+    min-width: 700px;
     margin-top: 50px;
 }
 
-.game2 {
-    padding-top: 10px;
-    text-align: center;
-    color: orange;
-}
 
 .game2-area {
     display: grid;
@@ -120,6 +121,11 @@ th, td {
     padding: 40px;
 }
 
+.game-link {
+    color:grey;
+    padding: 0px 40px;
+}
+
 .active-nav {
     color: rgb(222, 51, 245);
     background-color: whitesmoke;
@@ -127,8 +133,17 @@ th, td {
 }
 
 .active-game {
-    color: turquoise;
+    color: white;
+    animation-name: titleFlash;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite
 }
+@keyframes titleFlash {
+    0%   {color: white;}
+    49%  {color: white}
+    50%  {color: grey}
+    100% {color: grey;}
+  }
 
 .fixed-navbar {
     position: fixed;
@@ -143,7 +158,8 @@ th, td {
 
 .game-navbar {
     text-align: center;
-    padding: 0px 10px;
+    padding: 10x 10px;
+    margin-top: 30px
 }
 
 .page-not-found {
@@ -170,8 +186,85 @@ th, td {
     margin: 20px;
 }
 
-.snippet {
-    max-width: 220px;
-    margin: 5px;
-    border: 2px black solid
+.legendKey {
+    max-width: 300px;
+    padding: 5px;
+    margin: 3px;
+    border: 2px white dotted;
+    font-size: 10px;
+    text-align: left; 
 }
+
+.legend {
+ display: flexbox;
+ align-items: left
+}
+
+
+.snippet0 {
+    background-color:rgb(27, 27, 27);
+    color: yellow;
+    max-width: 250px;
+    margin: 5px 0px;
+    font-size: 12pt;
+    font-family:'Courier New', Courier, monospace;
+    text-align:left;
+}
+
+.snippet1 {
+    border:rgb(235, 0, 0) 2px solid;
+    color: white;
+    max-width: 250px;
+    margin: 5px 1px;
+    font-size: 12pt;
+    font-family:'Courier New', Courier, monospace;
+    text-align:left;
+}
+.snippet2 {
+    border:rgb(229, 245, 9) 2px solid;
+    color: white;
+    max-width: 250px;
+    margin: 5px 0px;
+    font-size: 12pt;
+    font-family:'Courier New', Courier, monospace;
+    text-align:left;
+}
+.snippet3 {
+    border:rgb(59, 236, 5) 2px solid;
+    color: white;
+    max-width: 250px;
+    margin: 5px 0px;
+    font-size: 12pt;
+    font-family:'Courier New', Courier, monospace;
+    text-align:left;
+}
+.snippet4 {
+    border:rgb(196, 1, 245) 2px solid;
+    color: white;
+    max-width: 250px;
+    margin: 5px 0px;
+    font-size: 12pt;
+    font-family:'Courier New', Courier, monospace;
+    text-align:left;
+}
+
+.goalContainer{
+    align-items: right;
+}
+
+.start-button {
+    margin-top: 15px;
+    padding: 5px 15px;
+    background-color: white;
+    animation-name: buttonFlash;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite
+}
+
+@keyframes buttonFlash {
+    0%   {background-color: white;}
+    49%  {background-color: white}
+    50%  {background-color: grey}
+    100% {background-color: grey;}
+  }
+     

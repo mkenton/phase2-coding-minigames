@@ -69,7 +69,7 @@ function App() {
         <nav className="fixed-navbar">
           <NavLink exact activeClassName="active-nav" className="links" to="/">Home</NavLink>
           <NavLink activeClassName="active-nav" className="links" to="/games">Games</NavLink>
-          <NavLink activeClassName="active-nav" className="links" to="/stats">Stats</NavLink>
+          <NavLink activeClassName="active-nav" className="links" to="/stats">High Scores</NavLink>
         </nav>
 
       <Switch>
